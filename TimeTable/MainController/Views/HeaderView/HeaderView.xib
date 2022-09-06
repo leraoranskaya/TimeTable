@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CormorantGaramond-Medium.ttf">
+            <string>CormorantGaramond-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Ruj-j1-nWP"/>
+                <outlet property="menuButton" destination="sRQ-d4-GJC" id="QrT-L4-xmv"/>
+                <outlet property="settingButton" destination="QYa-bC-9Sh" id="BHA-7n-3sf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="757" height="161"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYa-bC-9Sh">
+                    <rect key="frame" x="723" y="73.5" width="24" height="24"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="threePoints"/>
+                    <connections>
+                        <action selector="settingButtonAction:" destination="-1" eventType="touchUpInside" id="W7W-Fw-leK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRQ-d4-GJC">
+                    <rect key="frame" x="10" y="70.5" width="30" height="30"/>
+                    <state key="normal" image="menu"/>
+                    <connections>
+                        <action selector="menuButtonAction:" destination="-1" eventType="touchUpInside" id="Y4S-t8-YwI"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расписание занятий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn6-Xb-6aG">
+                    <rect key="frame" x="257.5" y="67.5" width="242.5" height="36.5"/>
+                    <fontDescription key="fontDescription" name="CormorantGaramond-Medium" family="Cormorant Garamond" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.51453305915970016" green="0.7693973183631897" blue="0.52009200983955572" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="sRQ-d4-GJC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Ehu-nT-96r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QYa-bC-9Sh" secondAttribute="trailing" constant="10" id="Njw-6L-ld9"/>
+                <constraint firstItem="kn6-Xb-6aG" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="QxQ-Qp-oMI"/>
+                <constraint firstItem="QYa-bC-9Sh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XPw-Z3-mmn"/>
+                <constraint firstItem="kn6-Xb-6aG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="rjy-QO-eqr"/>
+                <constraint firstItem="sRQ-d4-GJC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="yt0-SR-RG4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="386.23188405797106" y="-148.32589285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu" width="30" height="30"/>
+        <image name="threePoints" width="24" height="24"/>
+    </resources>
+</document>

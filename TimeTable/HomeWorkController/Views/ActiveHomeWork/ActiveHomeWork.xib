@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActiveHomeWork" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="l8R-lY-G26" id="Vnc-QX-qW4"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="nj7-hU-6qy"/>
+                <outlet property="createHomeWorkView" destination="Lgv-4y-xgj" id="L9Y-p6-2f3"/>
+                <outlet property="emptyActiveHomeWorkView" destination="c3J-ZQ-BcS" id="cl9-EY-D0F"/>
+                <outlet property="hideConstraintCreateHomeWorkView" destination="h1F-2E-3Ya" id="WYJ-uE-XvH"/>
+                <outlet property="selectedHomeWorkView" destination="G3w-xc-ZAn" id="ud3-1D-ipk"/>
+                <outlet property="tableView" destination="EpJ-fR-goc" id="e8N-Sb-DIq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EpJ-fR-goc">
+                    <rect key="frame" x="10" y="49" width="394" height="813"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-xc-ZAn" customClass="SelectedHomeWorkView" customModule="project" customModuleProvider="target">
+                    <rect key="frame" x="67" y="124" width="280" height="130"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="uE0-gd-3AG"/>
+                        <constraint firstAttribute="width" constant="280" id="zfe-QT-J05"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3J-ZQ-BcS" customClass="EmptyActiveHomeWorkView" customModule="project" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgv-4y-xgj" customClass="CreateHomeWorkView" customModule="project" customModuleProvider="target">
+                    <rect key="frame" x="47" y="104" width="320" height="350"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="Zm1-n6-Lmk"/>
+                        <constraint firstAttribute="width" constant="320" id="nYe-VX-J8C"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8R-lY-G26">
+                    <rect key="frame" x="346" y="828" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="Qhp-Q6-ioU"/>
+                        <constraint firstAttribute="height" constant="48" id="uD0-q2-L35"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="tintColor" name="labelTextColor"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonAction:" destination="-1" eventType="touchUpInside" id="zOe-Vx-ryT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EpJ-fR-goc" secondAttribute="trailing" constant="10" id="2JX-8j-iPL"/>
+                <constraint firstItem="G3w-xc-ZAn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="80" id="2Qj-HD-P3E"/>
+                <constraint firstItem="c3J-ZQ-BcS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5b3-EC-ziE"/>
+                <constraint firstAttribute="bottom" secondItem="l8R-lY-G26" secondAttribute="bottom" constant="20" id="8GA-Yq-s4m"/>
+                <constraint firstItem="Lgv-4y-xgj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ggt-nS-6FT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c3J-ZQ-BcS" secondAttribute="trailing" id="N3X-Cz-4fd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EpJ-fR-goc" secondAttribute="bottom" id="N6p-oF-dn2"/>
+                <constraint firstItem="G3w-xc-ZAn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OTh-UQ-DYJ"/>
+                <constraint firstItem="c3J-ZQ-BcS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aDk-47-O0i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l8R-lY-G26" secondAttribute="trailing" constant="20" id="fMs-ek-kW3"/>
+                <constraint firstItem="EpJ-fR-goc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="gab-dw-j6g"/>
+                <constraint firstItem="Lgv-4y-xgj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="h1F-2E-3Ya"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="c3J-ZQ-BcS" secondAttribute="bottom" id="lm3-Ev-avH"/>
+                <constraint firstItem="EpJ-fR-goc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="uRc-N9-8xy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="labelTextColor">
+            <color white="0.33000001311302185" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>

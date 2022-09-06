@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyActiveHomeWorkView" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="addHomeWorkLabel" destination="4Qd-Ad-Jnv" id="Fwl-U9-dS2"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="pQd-fV-89M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="702"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Домашних заданий нет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHn-Kc-f88">
+                    <rect key="frame" x="10" y="164" width="394" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" name="labelTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажмите на &quot;+&quot;, чтобы добавить домашнее задание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qd-Ad-Jnv">
+                    <rect key="frame" x="20" y="240" width="374" height="57.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.38738151539999999" green="0.38738151539999999" blue="0.38738151539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Qd-Ad-Jnv" secondAttribute="trailing" constant="20" id="0gz-ir-UlP"/>
+                <constraint firstItem="4Qd-Ad-Jnv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="5gI-kp-eOh"/>
+                <constraint firstItem="NHn-Kc-f88" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="120" id="9MZ-7k-noY"/>
+                <constraint firstItem="NHn-Kc-f88" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Afi-NR-9LT"/>
+                <constraint firstItem="4Qd-Ad-Jnv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FYd-ij-bCd"/>
+                <constraint firstItem="NHn-Kc-f88" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="NM6-Ep-Hfo"/>
+                <constraint firstItem="4Qd-Ad-Jnv" firstAttribute="top" secondItem="NHn-Kc-f88" secondAttribute="bottom" constant="40" id="n9Q-L7-eSL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NHn-Kc-f88" secondAttribute="trailing" constant="10" id="nG7-nr-FdI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="11.383928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="labelTextColor">
+            <color white="0.33000001311302185" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>
