@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CormorantGaramond-Medium.ttf">
+            <string>CormorantGaramond-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="iCN-ea-u8I"/>
+                <outlet property="homeworkLabel" destination="p3A-cP-85i" id="1w8-49-c9D"/>
+                <outlet property="timetableLabel" destination="ig0-Cd-w6K" id="TwM-wd-ZTu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-ew-x4y">
+                    <rect key="frame" x="20" y="159" width="287" height="30"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig0-Cd-w6K">
+                    <rect key="frame" x="0.0" y="197" width="287" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title=" Расписание занятий">
+                        <color key="titleColor" red="0.38738151539999999" green="0.38738151539999999" blue="0.38738151539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <imageReference key="image" image="timetable" renderingMode="original"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="6" scale="default" weight="light"/>
+                    </state>
+                    <connections>
+                        <action selector="timetableOfLessonsButtonAction:" destination="-1" eventType="touchUpInside" id="faD-qC-ybz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3A-cP-85i">
+                    <rect key="frame" x="0.0" y="274" width="276" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title=" Домашние задания">
+                        <color key="titleColor" red="0.38738151539999999" green="0.38738151539999999" blue="0.38738151539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <imageReference key="image" image="homework" renderingMode="template"/>
+                    </state>
+                    <connections>
+                        <action selector="homeWorkButtonAction:" destination="-1" eventType="touchUpInside" id="YEX-V9-eho"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xpm-H4-hO3">
+                    <rect key="frame" x="0.0" y="-4" width="414" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-f8-qGZ">
+                            <rect key="frame" x="170" y="68" width="74" height="36.5"/>
+                            <fontDescription key="fontDescription" name="CormorantGaramond-Medium" family="Cormorant Garamond" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="mainColor"/>
+                    <constraints>
+                        <constraint firstItem="mbl-f8-qGZ" firstAttribute="centerX" secondItem="Xpm-H4-hO3" secondAttribute="centerX" id="VSE-RV-MJ5"/>
+                        <constraint firstItem="mbl-f8-qGZ" firstAttribute="centerY" secondItem="Xpm-H4-hO3" secondAttribute="centerY" constant="22.25" id="h3e-YR-mxY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TYl-ew-x4y" firstAttribute="leading" secondItem="ig0-Cd-w6K" secondAttribute="leading" constant="20" id="3Vo-nm-3of"/>
+                <constraint firstItem="ig0-Cd-w6K" firstAttribute="top" secondItem="TYl-ew-x4y" secondAttribute="bottom" constant="8" id="6vx-6U-kYL"/>
+                <constraint firstItem="Xpm-H4-hO3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MQU-KG-9FJ"/>
+                <constraint firstItem="TYl-ew-x4y" firstAttribute="centerX" secondItem="p3A-cP-85i" secondAttribute="centerX" constant="25.5" id="Mfc-kn-7GW"/>
+                <constraint firstItem="TYl-ew-x4y" firstAttribute="top" secondItem="Xpm-H4-hO3" secondAttribute="bottom" constant="35" id="YeZ-be-3ab"/>
+                <constraint firstAttribute="bottom" secondItem="TYl-ew-x4y" secondAttribute="bottom" constant="707" id="a9M-eH-mdg"/>
+                <constraint firstItem="p3A-cP-85i" firstAttribute="top" secondItem="ig0-Cd-w6K" secondAttribute="bottom" constant="29" id="dh7-Im-wf9"/>
+                <constraint firstItem="TYl-ew-x4y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="f7b-bR-9qx"/>
+                <constraint firstItem="Xpm-H4-hO3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-48" id="nX7-7I-747"/>
+                <constraint firstItem="Xpm-H4-hO3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qm2-im-szz"/>
+                <constraint firstAttribute="bottom" secondItem="Xpm-H4-hO3" secondAttribute="bottom" constant="772" id="wad-gx-8ys"/>
+                <constraint firstItem="TYl-ew-x4y" firstAttribute="trailing" secondItem="ig0-Cd-w6K" secondAttribute="trailing" constant="20" id="zzG-9z-qIa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="51.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="homework" width="48" height="48"/>
+        <image name="timetable" width="48" height="48"/>
+        <namedColor name="mainColor">
+            <color red="0.30000001192092896" green="0.55500000715255737" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateHomeWorkView" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarView" destination="jBQ-J6-fKw" id="cl3-aP-FNM"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="mbD-kk-ZR3"/>
+                <outletCollection property="textFields" destination="eu0-yW-fc9" collectionClass="NSMutableArray" id="Kxw-V0-NCf"/>
+                <outletCollection property="textFields" destination="uHc-R7-sp9" collectionClass="NSMutableArray" id="c8W-G8-YCG"/>
+                <outletCollection property="textFields" destination="atL-07-cKj" collectionClass="NSMutableArray" id="sbd-PU-Z9U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-ZI-eS8">
+                    <rect key="frame" x="15" y="59" width="384" height="788"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить задание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf1-d5-5iP">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="153.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дедлайн" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu0-yW-fc9">
+                            <rect key="frame" x="0.0" y="158.5" width="384" height="153.5"/>
+                            <color key="backgroundColor" name="createLessonColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldsAction:" destination="-1" eventType="editingDidBegin" id="gKx-zT-Icr"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Предмет" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHc-R7-sp9">
+                            <rect key="frame" x="0.0" y="317" width="384" height="154"/>
+                            <color key="backgroundColor" name="createLessonColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldsAction:" destination="-1" eventType="editingDidBegin" id="4ch-Fl-IXr"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Задание" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atL-07-cKj">
+                            <rect key="frame" x="0.0" y="476" width="384" height="153.5"/>
+                            <color key="backgroundColor" name="createLessonColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldsAction:" destination="-1" eventType="editingDidBegin" id="BR1-rS-B2S"/>
+                            </connections>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRl-z0-x6f">
+                            <rect key="frame" x="0.0" y="634.5" width="384" height="153.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAc-dd-iu5">
+                                    <rect key="frame" x="0.0" y="0.0" width="313" height="153.5"/>
+                                    <state key="normal" title="Сохранить">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="PiE-sJ-3tn"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMn-aG-EEv">
+                                    <rect key="frame" x="313" y="0.0" width="71" height="153.5"/>
+                                    <state key="normal" title="Отменить">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="F2I-mC-DFm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBQ-J6-fKw" customClass="CalendarView" customModule="project" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="mainColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jBQ-J6-fKw" secondAttribute="trailing" id="6cw-CD-QSl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hUs-ZI-eS8" secondAttribute="bottom" constant="15" id="A1p-3v-qk8"/>
+                <constraint firstItem="hUs-ZI-eS8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="G50-wa-Jmn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jBQ-J6-fKw" secondAttribute="bottom" id="HOl-uJ-8BH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hUs-ZI-eS8" secondAttribute="trailing" constant="15" id="S0r-vW-5Xi"/>
+                <constraint firstItem="jBQ-J6-fKw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Wc3-Bx-emO"/>
+                <constraint firstItem="hUs-ZI-eS8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="lFd-ZZ-t73"/>
+                <constraint firstItem="jBQ-J6-fKw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rH5-6g-Fsw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="createLessonColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.30000001192092896" green="0.55500000715255737" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

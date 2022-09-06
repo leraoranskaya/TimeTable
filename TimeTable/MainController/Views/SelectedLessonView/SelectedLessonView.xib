@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedLessonView" customModule="project" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="fsT-gH-dwl"/>
+                <outlet property="deleteLessonButton" destination="mes-n7-Lj3" id="okj-wV-PRr"/>
+                <outlet property="editButton" destination="F5H-tV-0bW" id="Bai-ru-nKT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="378"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Um7-z3-7zb">
+                    <rect key="frame" x="15" y="59" width="384" height="304"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5H-tV-0bW">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
+                            <color key="tintColor" name="whiteAndBlackColor"/>
+                            <state key="normal" title="Редактировать занятие"/>
+                            <connections>
+                                <action selector="aditLessonButtonAction:" destination="-1" eventType="touchUpInside" id="wf5-a2-uGc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mes-n7-Lj3">
+                            <rect key="frame" x="0.0" y="274" width="384" height="30"/>
+                            <color key="tintColor" name="whiteAndBlackColor"/>
+                            <state key="normal" title="Удалить занятие"/>
+                            <connections>
+                                <action selector="deleteLessonButonAction:" destination="-1" eventType="touchUpInside" id="Bbz-Pg-ZHB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mes-n7-Lj3" firstAttribute="leading" secondItem="Um7-z3-7zb" secondAttribute="leading" id="611-pm-rKh"/>
+                        <constraint firstAttribute="trailing" secondItem="mes-n7-Lj3" secondAttribute="trailing" id="JOS-Sg-zug"/>
+                        <constraint firstItem="F5H-tV-0bW" firstAttribute="leading" secondItem="Um7-z3-7zb" secondAttribute="leading" id="QnX-FW-wSg"/>
+                        <constraint firstAttribute="bottom" secondItem="mes-n7-Lj3" secondAttribute="bottom" id="Vxx-eX-uHv"/>
+                        <constraint firstItem="F5H-tV-0bW" firstAttribute="top" secondItem="Um7-z3-7zb" secondAttribute="top" id="fvL-iQ-3mQ"/>
+                        <constraint firstAttribute="trailing" secondItem="F5H-tV-0bW" secondAttribute="trailing" id="yEO-iW-fFc"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Um7-z3-7zb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="O00-ci-zen"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Um7-z3-7zb" secondAttribute="bottom" constant="15" id="ZuJ-GT-AYg"/>
+                <constraint firstItem="Um7-z3-7zb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="b7k-pZ-XNt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Um7-z3-7zb" secondAttribute="trailing" constant="15" id="gzt-yG-kzY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="whiteAndBlackColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>
